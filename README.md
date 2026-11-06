@@ -42,7 +42,7 @@ A full stack personal finance tracker being built in phases from the supplied pr
 2. Run `supabase/schema.sql` once in the Supabase SQL Editor. It creates the tables, profile signup trigger, starter categories, and row-level security policies.
 3. Serve the frontend and confirm the footer says **Supabase configured**.
 
-The client is initialized, and the database schema is ready, but the current feature API still reads and writes through Spring Boot/MySQL. The next integration step is migrating the API/data access to Supabase Auth and Postgres; it needs the project URL and publishable key. Never use a service-role key in the browser.
+Email signup, sign-in, session restore, and sign-out use Supabase Auth. Categories, transactions, budgets, dashboard analytics, reports, and saved interest calculations now use Supabase Postgres with row-level security. Run `supabase/schema.sql` first to create and seed the tables. Savings-goal management and profile updates still use Spring Boot/MySQL. Never use a service-role key in the browser.
 
 ## Run locally
 
